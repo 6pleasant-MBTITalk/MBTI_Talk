@@ -27,10 +27,11 @@
             />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Detail_txt_Nickname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="이도연"
+            android:text=""
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -79,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="INFP"
+            android:text=""
             app:layout_constraintEnd_toEndOf="@+id/appCompatTextView15"
             app:layout_constraintStart_toStartOf="@+id/appCompatTextView15"
             app:layout_constraintTop_toBottomOf="@+id/appCompatTextView15" />
@@ -99,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="19"
+            android:text=""
             app:layout_constraintEnd_toEndOf="@+id/appCompatTextView17"
             app:layout_constraintStart_toStartOf="@+id/appCompatTextView17"
             app:layout_constraintTop_toBottomOf="@+id/appCompatTextView17" />
