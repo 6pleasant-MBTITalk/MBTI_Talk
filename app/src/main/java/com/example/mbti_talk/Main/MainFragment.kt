@@ -42,8 +42,7 @@ class MainFragment : Fragment() {
     * onCreateView에서 inflate 된 레이아웃에 대한 추가 작업을 수행
     * ex) view 에 data 채우거나 event 처리
     * super.onViewCreated(view, savedInstanceState)는 상위 클래스(부모 Fragment 또는 AppCompatActivity)의 onViewCreated 함수 호출.
-    * 여기서 view는 onCreateView에서 반환한 뷰입니다
-    * */
+    * 여기서 view는 onCreateView에서 반환한 뷰 */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

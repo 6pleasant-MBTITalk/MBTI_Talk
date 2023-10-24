@@ -1,13 +1,14 @@
 package com.example.mbti_talk
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.mbti_talk.Adapter.UserAdapter
+import com.example.mbti_talk.Main.MainFriendActivity
 import com.example.mbti_talk.databinding.ActivityDetailBinding
-import com.example.mbti_talk.databinding.ActivityMainBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -93,5 +94,19 @@ class DetailActivity : AppCompatActivity() {
                 Toast.makeText(this@DetailActivity, "데이터를 가져오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
             }
         })
+        val friendAdd = binding.DetailBtnFriendAdd
+
+        friendAdd.setOnClickListener {
+            // RDB 의 "Friends" 레퍼런스에 사용자 uid 추가
+            if (userID != null) {
+                val friendsRef = Firebase.database.reference.child("Friends").child(userID)
+                friendsRef.child("friend_uid").setValue(userID)
+            }
+            // 클릭 이벤트 처리
+            // Intent 사용하여 MainFriendActivity 로 이동
+            val intent = Intent(this, MainFriendActivity::class.java)
+            Toast.makeText(this@DetailActivity, "친구 추가가 완료되었습니다.", Toast.LENGTH_SHORT).show()
+            startActivity(intent)
+        }
     }
 }
