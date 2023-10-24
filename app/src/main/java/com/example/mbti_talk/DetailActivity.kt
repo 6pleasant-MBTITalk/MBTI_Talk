@@ -29,6 +29,7 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var genderTextView: AppCompatTextView
     private lateinit var mbtiTextView: AppCompatTextView
 
+  
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -63,7 +64,6 @@ class DetailActivity : AppCompatActivity() {
                     } else {
                         // 사용자 정보를 가져오지 못한 경우
                         Toast.makeText(this@DetailActivity, "사용자 정보를 가져오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
-                    }
 
                     // 데이터에서 이름, 나이, 성별, MBTI 정보 가져오기 (RDB 에서 특정 유저 정보를 가져와 변수에 저장하는 부분. DB의 트리 구조와 각 데이터 유형에 맞게 데이터 뽑아옴)
                     val name = userData.child("user_nickName").getValue<String?>() // userData라는 DataSnapshot에서 "user_nickName"이라는 자식 경로에 있는 값을 가져옴.
@@ -94,7 +94,8 @@ class DetailActivity : AppCompatActivity() {
                 Toast.makeText(this@DetailActivity, "데이터를 가져오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
             }
         })
-        val friendAdd = binding.DetailBtnFriendAdd
+
+          val friendAdd = binding.DetailBtnFriendAdd
 
         friendAdd.setOnClickListener {
             // RDB 의 "Friends" 레퍼런스에 사용자 uid 추가
@@ -107,6 +108,6 @@ class DetailActivity : AppCompatActivity() {
             val intent = Intent(this, MainFriendActivity::class.java)
             Toast.makeText(this@DetailActivity, "친구 추가가 완료되었습니다.", Toast.LENGTH_SHORT).show()
             startActivity(intent)
-        }
+        }        
     }
 }
