@@ -63,6 +63,7 @@
             android:layout_marginEnd="32dp"
             android:background="@drawable/login_etxt_kit"
             android:hint="아이디"
+            android:text="wrgerhet@gmail.com"
             android:paddingStart="10dp"
             android:textColorHint="#D2D2D2"
             android:textSize="18sp"
@@ -80,6 +81,7 @@
             android:layout_marginEnd="32dp"
             android:background="@drawable/login_etxt_kit"
             android:hint="비밀번호"
+            android:text="123456"
             android:paddingStart="10dp"
             android:textColorHint="#D2D2D2"
             android:textSize="18sp"
@@ -164,8 +166,9 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/LoginImageViewGoogle"
+            android:layout_width="90dp"
+            android:layout_height="81dp"
             android:layout_marginTop="16dp"
             android:src="@drawable/ic_google"
             app:layout_constraintEnd_toEndOf="parent"
