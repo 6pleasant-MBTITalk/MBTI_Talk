@@ -15,6 +15,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mbti_talk.Main.MainActivity
 import com.example.mbti_talk.databinding.ActivityLogInBinding
+import com.example.mbti_talk.utils.Utils
 import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -107,6 +108,12 @@ class LogInActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // 로그인 성공 토스팅
+                    val user = firebaseAuth.currentUser
+                    val uid = user?.uid
+                    Log.d("jblee", "UID ==== ${uid}")
+
+                    Utils.setMyUid(this, uid.toString())
+
                     Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
                     // 메인 페이지 이동
                     val intent = Intent(this, MainActivity::class.java)
