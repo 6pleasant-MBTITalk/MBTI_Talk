@@ -95,7 +95,6 @@ class DetailActivity : AppCompatActivity() {
             }
         })
 
-
         val friendAdd = binding.DetailBtnFriendAdd
 
         friendAdd.setOnClickListener {
