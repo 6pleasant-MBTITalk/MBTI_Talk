@@ -31,7 +31,7 @@ import com.google.firebase.storage.ktx.storage
 
 class SignUpActivity : AppCompatActivity() {
 
-
+//
     lateinit var selectedUri: Uri
     val storage = Firebase.storage("gs://mbti-talk-f2a04.appspot.com")
 
