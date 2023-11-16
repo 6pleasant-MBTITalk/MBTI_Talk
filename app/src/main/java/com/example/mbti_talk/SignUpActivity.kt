@@ -125,9 +125,6 @@ class SignUpActivity : AppCompatActivity() {
         }
 
 
-
-
-
         binding.SignUpBtnSignUp.setOnClickListener {
 
             val builder = AlertDialog.Builder(this)
