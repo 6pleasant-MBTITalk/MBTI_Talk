@@ -49,8 +49,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/SignUp_txt_title" />
 
 
-            <!--tools:srcCompat="@tools:sample/avatars" />-->
-
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view"
