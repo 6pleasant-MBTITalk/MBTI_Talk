@@ -50,7 +50,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Signout_btn_check"
-            android:layout_width="123dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="확인"
@@ -58,7 +58,7 @@
             android:textStyle="bold"
             android:background="@drawable/login_btn_kit"
             app:layout_constraintEnd_toStartOf="@+id/Signout_btn_cancel"
-            app:layout_constraintHorizontal_bias="0.5"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appCompatTextView8"
             app:layout_constraintWidth_percent="0.3" />
