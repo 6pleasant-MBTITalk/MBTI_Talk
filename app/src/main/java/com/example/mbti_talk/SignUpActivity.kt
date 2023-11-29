@@ -88,7 +88,7 @@ class SignUpActivity : AppCompatActivity() {
         //비밀번호 재확인
         passwordFocusListener2()
         //닉네임 확인
-        NickFocusListener()
+//        NickFocusListener()
 
 
         //라디오버튼 누르면 이곳으로 값을 전해준다.
@@ -156,7 +156,7 @@ class SignUpActivity : AppCompatActivity() {
                 binding.SignUpConstEmail.helperText = validEmail()
                 binding.SignUpConstPw.helperText = validPassword()
                 binding.SignUpConstPw2.helperText = validPassword2()
-                binding.SignUpConstNickName.helperText = validNIck()
+//                binding.SignUpConstNickName.helperText = validNIck()
 
 
                 val validEmail = binding.SignUpConstEmail.helperText == null
@@ -433,22 +433,22 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     //닉네임 칸
-    private fun NickFocusListener() {
-        binding.SignUpEtxtNickName.setOnFocusChangeListener { _, focused ->
-            if (!focused) {
-                binding.SignUpConstNickName.helperText = validNIck()
-            }
-        }
-    }
+//    private fun NickFocusListener() {
+//        binding.SignUpEtxtNickName.setOnFocusChangeListener { _, focused ->
+//            if (!focused) {
+//                binding.SignUpConstNickName.helperText = validNIck()
+//            }
+//        }
+//    }
 
     //닉네임 양식체크
-    private fun validNIck(): String? {
-        val passwordText = binding.SignUpEtxtNickName.text.toString()
-        if (passwordText.length > 13) {
-            return "12자 이내의 닉네임을 입력하세요"
-        }
-        return null
-    }
+//    private fun validNIck(): String? {
+//        val passwordText = binding.SignUpEtxtNickName.text.toString()
+//        if (passwordText.length > 13) {
+//            return "12자 이내의 닉네임을 입력하세요"
+//        }
+//        return null
+//    }
 
 
 
