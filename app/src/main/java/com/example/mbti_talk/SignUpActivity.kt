@@ -60,7 +60,6 @@ class SignUpActivity : AppCompatActivity() {
     var myProfileUri: Boolean = false
 
 
-    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // 뷰바인딩 초기화
@@ -359,9 +358,13 @@ class SignUpActivity : AppCompatActivity() {
     //이메일 양식체크
     private fun validEmail(): String? {
         val emailText = binding.SignUpEtxtID.text.toString()
+        if (emailText.isEmpty()) {
+            return "이메일을 입력해 주세요"
+        }
         if (!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()) {
             return "이메일 양식을 확인해 주세요"
         }
+
         return null
     }
 
@@ -380,14 +383,7 @@ class SignUpActivity : AppCompatActivity() {
         val passwordText = binding.SignUpEtxtPW.text.toString()
         if (passwordText.length < 6) {
             return "6자 이상의 Password를 입력하세요"
-        }
-        if (!passwordText.matches(".*[A-Z].*".toRegex())) {
-            return "1개 이상 대문자를 포함해 주세요"
-        }
-        if (!passwordText.matches(".*[a-z].*".toRegex())) {
-            return "1개 이상의 소문자를 포함해 주세요"
-        }
-        if (!passwordText.matches(".*[!@#\$%^&*\\-+=].*".toRegex())) {
+        } else if (!passwordText.matches(".*[!@#\$%^&*\\-+=].*".toRegex())) {
             return "1개 이상의 특수문자를 포함해 주세요ㅣ(!@#\$%^&*\\-+=)"
         }
 
@@ -405,21 +401,15 @@ class SignUpActivity : AppCompatActivity() {
 
     //비밀번호 재확인 양식체크
     private fun validPassword2(): String? {
-        val passwordText = binding.SignUpEtxtPW2.text.toString()
-        if (passwordText.length < 6) {
-            return "6자 이상의 Password를 입력하세요"
+        if (binding.SignUpEtxtPW.text.toString() == binding.SignUpEtxtPW2.text.toString()) {
+            return null
         }
-        if (!passwordText.matches(".*[A-Z].*".toRegex())) {
-            return "1개 이상 대문자를 포함해 주세요"
-        }
-        if (!passwordText.matches(".*[a-z].*".toRegex())) {
-            return "1개 이상의 소문자를 포함해 주세요"
-        }
-        if (!passwordText.matches(".*[!@#\$%^&*\\-+=].*".toRegex())) {
-            return "1개 이상의 특수문자를 포함해 주세요ㅣ(!@#\$%^&*\\-+=)"
+        else{
+            return ("비밀번호가 일치하지 않습니다.")
         }
 
         return null
+
     }
 
     //맞지않는 형식 표출
