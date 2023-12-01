@@ -71,13 +71,13 @@ class LogInActivity : AppCompatActivity() {
         userDB = Firebase.database.reference.child("Users")
 
 
-        //구글 이미지 누를때 이벤트
-        imageViewGoogle.setOnClickListener {
-            binding.llLoading.visibility = View.VISIBLE
-            googleSignIn()
-
-            Log.d("goolgestart","google")
-        }
+//        //구글 이미지 누를때 이벤트
+//        imageViewGoogle.setOnClickListener {
+//            binding.llLoading.visibility = View.VISIBLE
+//            googleSignIn()
+//
+//            Log.d("goolgestart","google")
+//        }
 
 
         // 로그인 버튼 클릭 시
