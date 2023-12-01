@@ -59,7 +59,7 @@ class LogInActivity : AppCompatActivity() {
 
         }
         //구글 이미지 버튼
-        val imageViewGoogle = binding.LoginImageViewGoogle
+        //val imageViewGoogle = binding.LoginImageViewGoogle
         //구글로그인 옵션
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
