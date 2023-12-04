@@ -123,7 +123,7 @@
                     android:id="@+id/SignUp_etxt_NickName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="12자 이내의 닉네임을 입력해주세요.."
+                    android:hint="12자 이내의 닉네임을 입력해주세요."
                     android:inputType="text"
                     android:maxLength="12" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -153,7 +153,7 @@
                 android:id="@+id/SignUp_etxt_Age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="나이 입력"
+                android:hint="나이를 입력해 주세요."
                 android:maxLength="3"
                 android:inputType="number"
 

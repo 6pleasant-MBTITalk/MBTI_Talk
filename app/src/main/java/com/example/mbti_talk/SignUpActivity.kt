@@ -384,7 +384,7 @@ class SignUpActivity : AppCompatActivity() {
         if (passwordText.length < 6) {
             return "6자 이상의 Password를 입력하세요"
         } else if (!passwordText.matches(".*[!@#\$%^&*\\-+=].*".toRegex())) {
-            return "1개 이상의 특수문자를 포함해 주세요ㅣ(!@#\$%^&*\\-+=)"
+            return "1개 이상의 특수문자를 포함해 주세요(!@#\$%^&*\\-+=)"
         }
 
         return null

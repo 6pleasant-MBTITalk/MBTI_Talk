@@ -305,7 +305,7 @@ class SignUpActivity2 : AppCompatActivity() {
     private fun validNIck(): String? {
         val passwordText = binding.SignUpEtxtNickName.text.toString()
         if (passwordText.length > 13) {
-            return "12자 이내의 닉네임을 입력하세요"
+            return "12자 이내의 닉네임을 입력하세요."
         }
         return null
     }
