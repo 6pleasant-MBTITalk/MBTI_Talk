@@ -162,10 +162,10 @@ class SignUpActivity : AppCompatActivity() {
                 val validEmail = binding.SignUpConstEmail.helperText == null
                 val validPassword = binding.SignUpConstPw.helperText == null
                 val validPassword2 = binding.SignUpConstPw2.helperText == null
-                val validNick = binding.SignUpConstNickName.helperText == null
+                //val validNick = binding.SignUpConstNickName.helperText == null
 
 
-                if (validEmail && validPassword && validPassword2 && validNick) {
+                if (validEmail && validPassword && validPassword2) {
 
 
                     // 유저가 입력한 회원가입 정보 가져오기

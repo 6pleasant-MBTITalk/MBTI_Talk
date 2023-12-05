@@ -196,7 +196,7 @@
                         android:id="@+id/SignUp_etxt_PW2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="위와 동일한 비밀번호를 입력해 주세요."
+                        android:hint="위와 같은 비밀번호를 입력해 주세요."
                         android:inputType="textPassword"
                         android:lines="1"
                         android:maxLength="16" />
