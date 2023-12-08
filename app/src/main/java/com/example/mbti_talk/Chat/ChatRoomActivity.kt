@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -96,13 +97,18 @@ class ChatRoomActivity : AppCompatActivity() {
     }
 
     fun putMessage() {       //메시지 전송
-        var message = Message(myUid, getDateTimeString(), edt_message.text.toString())    //메시지 정보 초기화
-
-        FirebaseDatabase.getInstance().getReference("ChatRoom").child("chatRooms")
-            .child(chatRoomKey).child("messages")                   //현재 채팅방에 메시지 추가
-            .push().setValue(message).addOnSuccessListener {
-                edt_message.text.clear()
-            }
+        val messageText = edt_message.text.toString().trim()
+        if (messageText.isNotEmpty()) {
+            val message = Message(myUid, getDateTimeString(), messageText)
+            FirebaseDatabase.getInstance().getReference("ChatRoom")
+                .child("chatRooms").child(chatRoomKey).child("messages")
+                .push().setValue(message)
+                .addOnSuccessListener {
+                    edt_message.text.clear()
+                }
+        } else {
+            Toast.makeText(this, "메시지를 입력해주세요", Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun getDateTimeString(): String {          //메시지 보낸 시각 정보 반환

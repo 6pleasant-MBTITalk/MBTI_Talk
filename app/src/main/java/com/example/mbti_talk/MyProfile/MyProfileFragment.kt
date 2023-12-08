@@ -35,8 +35,6 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
-import nb_.mbti_talk.Chat.User
-import nb_.mbti_talk.databinding.ActivityPostWriteBinding
 
 
 class MyProfileFragment : Fragment() {
