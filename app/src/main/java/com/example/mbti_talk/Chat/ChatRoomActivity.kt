@@ -96,6 +96,7 @@ class ChatRoomActivity : AppCompatActivity() {
             })
     }
 
+
     fun putMessage() {       //메시지 전송
         val messageText = edt_message.text.toString().trim()
         if (messageText.isNotEmpty()) {
